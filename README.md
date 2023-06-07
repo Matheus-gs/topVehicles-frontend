@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm install` to add all necessary dependencies
 
 ## Start backend
-Follow the instructions on [Readme topVehiles-backend](https://github.com/Matheus-gs/topVehicles-backend)
+Follow the instructions on [Readme topVehicles-backend](https://github.com/Matheus-gs/topVehicles-backend)
 
 ## Development server
 Run `ng serve` or `npm start` for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
