@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 0;
+}
+
+table {
+  width: 88vw;
+}
+
+table th,
+table td {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #454545
+}
+
+table .clickable-row {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+table .clickable-row:hover {
+  filter: brightness(0.95);
+}

@@ -1,0 +1,102 @@
+<h1 mat-dialog-title>
+  {{ vehicleCurrentName && "Informações de " + vehicleCurrentName }}
+</h1>
+<div mat-dialog-content class="container">
+  <form [formGroup]="vehicle">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Placa</mat-label>
+      <input matInput placeholder="Placa do veículo" formControlName="placa" name="placa" minlength="7" maxlength="8" />
+
+      <mat-error *ngIf="vehicle.controls.placa.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+
+      <mat-error *ngIf="vehicle.controls.placa.hasError('minlength')">
+        Mínimo 8 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Chassi</mat-label>
+      <input matInput placeholder="Chassi do veículo" formControlName="chassi" name="chassi" minlength="17"
+        maxlength="17" />
+
+      <mat-error *ngIf="vehicle.controls.chassi.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+
+      <mat-error *ngIf="vehicle.controls.chassi.hasError('minlength')">
+        Mínimo 17 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Renavam</mat-label>
+      <input matInput placeholder="Renavam do veículo" formControlName="renavam" name="renavam" minlength="11"
+        maxlength="11" />
+
+      <mat-error *ngIf="vehicle.controls.renavam.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+
+      <mat-error *ngIf="vehicle.controls.renavam.hasError('minlength')">
+        Mínimo 11 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Modelo</mat-label>
+      <input matInput placeholder="Modelo do veículo" formControlName="modelo" name="modelo" maxlength="20" />
+
+      <mat-error *ngIf="vehicle.controls.modelo.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Marca</mat-label>
+      <input matInput placeholder="Marca do veículo" formControlName="marca" name="marca" maxlength="20" />
+
+      <mat-error *ngIf="vehicle.controls.marca.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ano</mat-label>
+      <input matInput placeholder="Ano do veículo" formControlName="ano" name="ano" minlength="4" maxlength="4" />
+
+      <mat-error *ngIf="vehicle.controls.ano.hasError('required')">
+        Campo <strong>obrigatório</strong>
+      </mat-error>
+
+      <mat-error *ngIf="vehicle.controls.ano.hasError('minlength')">
+        Mínimo 4 caracteres
+      </mat-error>
+
+      <mat-error *ngIf="vehicle.controls.ano.hasError('pattern')">
+        Apenas números
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+
+  <div class="dialog-footer">
+    <button mat-raised-button color="warn" (click)="openDeleteVehicleModal()">
+      Remover
+    </button>
+
+    <div>
+
+
+      <button mat-raised-button (click)="closeUpdateVehicleModal()">Cancelar</button>
+      <button mat-raised-button color="primary" [disabled]="!vehicle.valid" (click)="handleUpdateVehicle()">
+        Salvar
+      </button>
+    </div>
+
+
+  </div>
+
+</div>

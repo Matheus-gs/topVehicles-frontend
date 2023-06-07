@@ -1,0 +1,10 @@
+.nav-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-toolbar .nav-itens-container {
+  display: flex;
+  align-items: center;
+}
